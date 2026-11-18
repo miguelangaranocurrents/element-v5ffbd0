@@ -45,6 +45,13 @@
     display: inline-flex;
 }
 
+/* Let the body shrink below its min-content width (e.g. wide code blocks),
+   so its text wraps within the tile instead of overflowing it. */
+.annotated > :not(.annotation),
+.annotatedInline > :not(.annotation) {
+    min-width: 0;
+}
+
 .annotation {
     user-select: none;
     display: inline-block;
